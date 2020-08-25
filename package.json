@@ -4,7 +4,6 @@
   "description": "svelte cli",
   "main": "index.js",
   "scripts": {
-    "dev": "node ./bin/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {

@@ -1,19 +1,19 @@
-const program = require('commander')
+const program = require('commander');
 // 用户判断，是否执行
-const inquirer = require('inquirer')
+const inquirer = require('inquirer');
 // 执行创建命令
-const createProject = require('../src/create')
+const createProject = require('../src/create');
 
 // 版本号
-program.version(require('../package.json').version)
+program.version(require('../package.json').version);
 // 检验http | https | git开头
-const urlRegExp = /(http|https|git)([\w]+\/?)\S*/
+const urlRegExp = /(http|https|git)([\w]+\/?)\S*/;
 // 命令参数
-const args = process.argv.slice(2)[0]
+const args = process.argv.slice(2)[0];
 // 使用输入git链接方法
 if (args) {
   if (urlRegExp.test(args)) {
-    createProject(args)
+    createProject(args);
   } else {
     console.log("\033[41;30m Error \033[40;37m 请输入正确的项目地址 \033[41;0m");
   }

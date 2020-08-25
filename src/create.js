@@ -1,7 +1,7 @@
-const inquirer = require('inquirer')
-const shell = require('shelljs')
-const fs = require('fs')
-const OraLoading = require('../utils/oraLoading')
+const inquirer = require('inquirer');
+const shell = require('shelljs');
+const fs = require('fs');
+const OraLoading = require('../utils/oraLoading');
 
 /**
  * @desc 创建项目 
@@ -14,8 +14,8 @@ module.exports = function create (args) {
     name: 'name',
     default: 'svelte-project'
   }]).then(answer => {
-    const remote = args || 'https://github.com/Blubiubiu/svelte-template.git'
-    const tarName = answer.name
+    const remote = args || 'https://github.com/Blubiubiu/svelte-template.git';
+    const tarName = answer.name;
 
     fs.exists(tarName, function (exists) {
       if (exists) {
@@ -24,7 +24,7 @@ module.exports = function create (args) {
       }
     })
 
-    let loader = OraLoading('Loading')
+    let loader = OraLoading('Loading');
 
     shell.exec(`
         git clone ${remote} --depth=1
