@@ -27,7 +27,7 @@ module.exports = function create (args) {
     let loader = OraLoading('Loading');
 
     shell.exec(`
-        git clone ${remote} --depth=1
+        git clone ${remote} ${tarName} --depth=1 
         rm -rf ${tarName}/.git
     `, (error, stdout, stderr) => {
         if (error) {
