@@ -9,7 +9,7 @@ const createProject = require('../src/create');
 // 版本号
 program.version(require('../package.json').version);
 // 检验http | https | git开头
-const urlRegExp = /(http|https|git)([\w]+\/?)\S*/;
+const urlRegExp = /(http|https|git)([\w@]+\/?)\S*/;
 // 命令参数
 const args = process.argv.slice(2)[0];
 // 使用输入git链接方法
