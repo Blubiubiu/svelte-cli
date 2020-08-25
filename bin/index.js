@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const program = require('commander');
 // 用户判断，是否执行
 const inquirer = require('inquirer');
