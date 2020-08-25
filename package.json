@@ -1,5 +1,5 @@
 {
-  "name": "svelte-cli",
+  "name": "create-svelte-cli",
   "version": "1.0.0",
   "description": "svelte cli",
   "main": "index.js",
